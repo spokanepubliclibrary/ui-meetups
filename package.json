@@ -1,0 +1,119 @@
+{
+  "name": "@spokane-folio/meetups",
+  "version": "1.0.0",
+  "description": "Boilerplate for getting started with developing new Stripes ui-modules. Boilerplate is in the form of a generic example of a 'meetups' application for activities in relation to a library environment.",
+  "main": "src/index.js",
+  "repository": "",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "stripes serve",
+    "build": "stripes build --output ./output",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
+    "formatjs-compile": "stripes translate compile",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.9.0",
+    "@folio/eslint-config-stripes": "^7.0.0",
+    "@folio/jest-config-stripes": "^2.0.0",
+    "@folio/stripes": "^9.1.0",
+    "@folio/stripes-cli": "^3.0.0 || ^3.0.0",
+    "@folio/stripes-core": "^10.1.0",
+    "core-js": "^3.6.4",
+    "eslint": "^7.32.0",
+    "history": "^4.10.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.4",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "dependencies": {
+    "@folio/users": "^11.0.11",
+    "file-type": "^20.4.0",
+    "prop-types": "^15.6.0"
+  },
+  "peerDependencies": {
+    "@folio/stripes": "^9.0.0",
+    "react": "^18.2.0",
+    "react-intl": "^6.4.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "stripes": {
+    "actsAs": [
+      "app",
+      "settings"
+    ],
+    "displayName": "ui-meetups.meta.title",
+    "route": "/meetups",
+    "icons": [
+      {
+        "name": "app",
+        "alt": "Create, view and update meetups",
+        "title": "Meetups"
+      }
+    ],
+    "okapiInterfaces": {
+      "users": "16.0",
+      "users-bl": "5.0 6.0"
+    },
+    "permissionSets": [
+      {
+        "permissionName": "module.meetups.enabled",
+        "displayName": "UI: meetups module is enabled",
+        "visible": true
+      },
+      {
+        "permissionName": "settings.meetups.enabled",
+        "displayName": "Settings (meetups): display list of settings pages",
+        "subPermissions": [
+          "meetups.configurations.get",
+          "settings.enabled"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "settings.meetups.edit",
+        "displayName": "Settings (meetups): Edit settings",
+        "subPermissions": [
+          "settings.meetups.enabled",
+          "meetups.configurations.edit"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-meetups.view",
+        "displayName": "Meetups: Search and view meetups",
+        "description": "Can view meetups list and meetup details. Can use link for 'facilitator' at Users from within meetups details view. Can use MetaSection 'created by' link and 'last updated by' link to view that user at Users.",
+        "subPermissions": [
+          "module.meetups.enabled",
+          "meetups.collection.get",
+          "users.item.get",
+          "users.collection.get"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-meetups.edit",
+        "displayName": "Meetups: Search, create and edit meetups",
+        "description": "Can create meetup and edit meetup details. Can use link for 'facilitator' at Users from within meetups details view. Can use MetaSection 'created by' link and 'last updated by' link to view that user at Users.",
+        "subPermissions": [
+          "ui-meetups.view",
+          "meetups.edit"
+        ],
+        "visible": true
+      }
+    ]
+  }
+}

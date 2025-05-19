@@ -1,0 +1,47 @@
+# .gitlab-ci.example.yml
+# This is a generic example for building and packaging a FOLIO module.
+# Replace the placeholders with your own values and remove '.example' from the file name
+# There are two expected results from this pipeline:
+# 1. The application package (a tarball)
+# 2. The application's module-descriptor (module-descriptor.json)
+
+# This pipeline is configured to run only on the main branch
+
+image: node:bullseye
+
+stages:
+  - build
+  - deploy
+
+generate-mod-descriptor:
+  stage: build
+  script:
+    - apt-get update && apt-get install -y jq
+    - yarn install --frozen-lockfile
+    - yarn run build-mod-descriptor
+  artifacts:
+    paths:
+      - module-descriptor.json
+  only:
+    - main
+
+publish-npm:
+  stage: deploy
+  dependencies:
+    - generate-mod-descriptor
+  script:
+    - git config --global user.email "<your-email@example.com>"
+    - git config --global user.name "<your-username>"
+    - echo "your-folio-pkg-namespace:registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - yarn publish --registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/
+    - yarn pack
+  artifacts:
+    paths:
+      - "*.tgz"
+      - module-descriptor.json
+    exclude:
+      - .npmrc
+      - .gitlab-ci.example.yml
+  only:
+    - main

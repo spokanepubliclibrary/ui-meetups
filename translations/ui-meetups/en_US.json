@@ -1,0 +1,97 @@
+{
+  "meta.title": "Meetups",
+  "settings.label": "Meetups",
+  "settings.media": "Media",
+  "settings.allowMedia.paneTitle": "Allow media upload",
+  "stripes-components.paneMenuActionsToggleLabel": "Actions",
+  "stripes-components.metaSection.source": "{source}",
+  "stripes-components.metaSection.sourceNoData": "No Data Available",
+  "stripes-components.metaSection.recordCreated": "Record created: {date} at {time}",
+  "stripes-components.metaSection.recordLastUpdated": "Last updated: {date} at {time}",
+  "stripes-components.metaSection.recordCreatedNoData": "Record creation date not available.",
+  "stripes-components.metaSection.recordLastUpdatedNoData": "Record has not been updated.",
+  "stripes-components.clearThisField": "Clear this field",
+  "stripes-components.tableEmpty": "Table is empty.",
+  "meetups-paneset.searchable-indexes.keyword": "Keyword",
+  "meetups-paneset.search-pane.paneTitle": "Search",
+  "meetups-paneset.search-pane.search-button": "Search",
+  "meetups-paneset.search-pane.reset-button": "Reset all",
+  "stripes-components.searchFieldIndex": "Search field index",
+  "stripes-components.endOfList": "End of list",
+
+  "stripes-components.closeItem": "Close item",
+  "stripes-components.metaSection.screenReaderLabel": "Screen reader label",
+  "stripes-components.dismissModal": "Dismiss modal",
+  "stripes-components.MessageBanner.dismissButtonAriaLabel": "Dismiss button",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "meetups-create-pane.paneTitle": "Create",
+  "meetups-edit-pane.paneTitle": "Edit",
+
+  "meetups.cancel-button": "Cancel",
+  "meetups.save-and-close-button": "Save & close",
+  "meetups.close-continue-button": "Close & continue",
+  "meetups.search-add-facilitator-button": "Search and add facilitator",
+  "meetups.add-media-button": "Add media",
+  "meetups.edit-button": "Edit",
+  "remove-button": "Remove",
+  "media-marked-for-removal": "Marked for removal",
+  "undo-button": "Undo",
+  "meetups.action-menu.create-button": "Create",
+
+  "meetups.results-pane.paneTitle": "Results",
+
+  "meetups.active-value-true": "Yes",
+  "meetups.active-value-false": "No",
+
+  "meetups.accordion.details": "Details",
+  "meetups.accordion.media": "Media",
+
+  "meetups.label.name": "Name",
+  "meetups.label.location": "Location",
+  "meetups.label.frequency": "Frequency",
+  "meetups.label.active": "Active",
+  "meetups.label.description": "Description",
+  "meetups.label.facilitator": "Facilitator",
+  "meetups.label.facilitator-required": "*Facilitator required",
+
+  "modal-add-media-error-msg-unrecognized": "Unrecognized file signature",
+  "modal-add-media-error-msg-ext-not-allowed": "Not an allowed extension {ext}",
+  "modal-add-media-error-msg-file-too-large": "File too large for type {mime}, size: {fileSize} MB",
+  "modal-add-media-error-msg-while-reading-file": "Error while reading file - error: {errorMsg}",
+  "modal-add-media-error-msg-default": "Error accepting file",
+  "modal-add-media-label-add-media-file": "Add media file",
+  "modal-add-media-textField-description-media-file": "Description of media file",
+
+  "modal-select-facilitator.paneTitle": "Select facilitator",
+  "modal-select-facilitator.paneHeader": "Results",
+  "modal-select-facilitator.loading-pane.paneTitle": "Loading...",
+  "modal-select-facilitator.results-pane.paneTitle": "Results",
+  "modal-select-facilitator.search-field.placeholder": "Name or barcode",
+
+  "column-mapping.name": "Name",
+  "column-mapping.active": "Active",
+  "column-mapping.barcode": "Barcode",
+  "column-mapping.location": "Location",
+  "column-mapping.facilitator": "Facilitator",
+  "mcl.is-empty-message": "Empty, no results.",
+
+  "create-pane.loading-pane-submit-paneTitle": "Creating meetup...",
+  "create-pane.loading-pane-details-paneTitle": "Loading details... ",
+  "edit-pane.loading-pane-details-edit-paneTitle": "Loading edit details...",
+  "edit-pane.loading-pane-submit-update-paneTitle": "Updating meetup...",
+  "results-pane.loading-pane-results": "Loading results..."
+}
