@@ -106,6 +106,9 @@ Rename the file to 'stripes.config.js' and update the values as needed.
 
 [Stripes-util](https://github.com/folio-org/stripes-util)
 
+## Hello, there!
+Need a hand with the initial setup or general use of ui-meetups? Pressing 'big picture' questions? We want to make sure that 
+this boilerplate is generally consumable. Send me a note at chbrown@spokanelibrary.org and I'll do my best to assist. Please be advised that response times may vary. 
 
 ## Run your new app
 
